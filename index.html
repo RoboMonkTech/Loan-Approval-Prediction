@@ -1,88 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Loan Approval Prediction</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
 <body>
 
-<header>
-    <h1>🏦 Loan Approval Prediction System</h1>
-    <p>Machine Learning Based Loan Eligibility Checker</p>
-</header>
+<div class="background"></div>
 
-<div class="container">
+<nav>
 
-    <div class="card">
+<div class="logo">
 
-        <h2>Loan Application Form</h2>
+<i class="fa-solid fa-building-columns"></i>
 
-        <label>Applicant Name</label>
-        <input type="text" id="name" placeholder="Enter Applicant Name">
-
-        <label>Gender</label>
-        <select id="gender">
-            <option>Male</option>
-            <option>Female</option>
-        </select>
-
-        <label>Married</label>
-        <select id="married">
-            <option>Yes</option>
-            <option>No</option>
-        </select>
-
-        <label>Education</label>
-        <select id="education">
-            <option>Graduate</option>
-            <option>Not Graduate</option>
-        </select>
-
-        <label>Self Employed</label>
-        <select id="selfemp">
-            <option>No</option>
-            <option>Yes</option>
-        </select>
-
-        <label>Applicant Income</label>
-        <input type="number" id="income" placeholder="Enter Income">
-
-        <label>Loan Amount</label>
-        <input type="number" id="loan" placeholder="Enter Loan Amount">
-
-        <label>Credit History</label>
-        <select id="credit">
-            <option>Good</option>
-            <option>Bad</option>
-        </select>
-
-        <label>Property Area</label>
-        <select id="property">
-            <option>Urban</option>
-            <option>Semi Urban</option>
-            <option>Rural</option>
-        </select>
-
-        <button onclick="predictLoan()">
-            Predict Loan
-        </button>
-
-    </div>
-
-    <div class="card">
-
-        <h2>Prediction Result</h2>
-
-        <div id="resultBox">
-
-            <h1 id="output">
-                Waiting for Prediction...
-            </h1>
-
-            <p id="message">
-                Fill the application form and click Predict Loan.
-            </p>
-
-        </div>
-
-    </div>
+Loan Approval Prediction
 
 </div>
+
+</nav>
+
+<section class="hero">
+
+<h1>AI Powered Loan Approval System</h1>
+
+<p>
+
+Check whether an applicant is eligible for loan approval using
+
+Machine Learning concepts.
+
+</p>
+
+</section>
+
+<div class="main-container">
+
+<div class="form-card">
+
+<h2>
+
+<i class="fa-solid fa-file-circle-plus"></i>
+
+Loan Application
+
+</h2>
+
+<div class="grid">
+
+<div>
+
+<label>Applicant Name</label>
+
+<input type="text" id="name" placeholder="Enter Name">
+
+</div>
+
+<div>
+
+<label>Gender</label>
+
+<select id="gender">
+
+<option>Male</option>
+
+<option>Female</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Married</label>
+
+<select id="married">
+
+<option>Yes</option>
+
+<option>No</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Education</label>
+
+<select id="education">
+
+<option>Graduate</option>
+
+<option>Not Graduate</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Applicant Income</label>
+
+<input type="number" id="income" placeholder="Enter Income">
+
+</div>
+
+<div>
+
+<label>Loan Amount</label>
+
+<input type="number" id="loan" placeholder="Enter Loan Amount">
+
+</div>
+
+<div>
+
+<label>Credit History</label>
+
+<select id="credit">
+
+<option>Good</option>
+
+<option>Bad</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Property Area</label>
+
+<select id="property">
+
+<option>Urban</option>
+
+<option>Semi Urban</option>
+
+<option>Rural</option>
+
+</select>
+
+</div>
+
+</div>
+
+<button onclick="predictLoan()">
+
+<i class="fa-solid fa-magnifying-glass-chart"></i>
+
+Predict Eligibility
+
+</button>
+
+</div>
+
+<div class="result-card">
+
+<h2>
+
+<i class="fa-solid fa-chart-line"></i>
+
+Prediction Result
+
+</h2>
+
+<div id="resultBox">
+
+<div class="icon">
+
+<i class="fa-solid fa-hourglass-half"></i>
+
+</div>
+
+<h1 id="output">
+
+Waiting...
+
+</h1>
+
+<p id="message">
+
+Enter applicant details and click Predict Eligibility.
+
+</p>
+
+<div class="stats">
+
+<div>
+
+<h3 id="confidence">
+
+--
+
+</h3>
+
+<span>Confidence</span>
+
+</div>
+
+<div>
+
+<h3 id="risk">
+
+--
+
+</h3>
+
+<span>Risk</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Loan Approval Prediction System
+
+</p>
+
+</footer>
 
 <script src="script.js"></script>
 
 </body>
+
+</html>
