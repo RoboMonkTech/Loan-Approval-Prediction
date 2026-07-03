@@ -6,29 +6,67 @@ let credit = document.getElementById("credit").value;
 
 let output = document.getElementById("output");
 let message = document.getElementById("message");
-let box = document.getElementById("resultBox");
+let confidence = document.getElementById("confidence");
+let risk = document.getElementById("risk");
+let resultBox = document.getElementById("resultBox");
+let icon = document.querySelector(".icon");
 
-box.classList.remove("approved");
-box.classList.remove("rejected");
+resultBox.classList.remove("approved");
+resultBox.classList.remove("rejected");
+
+if(income==0 || loan==0){
+
+output.innerHTML="Please Enter Details";
+
+message.innerHTML="Fill all the required fields.";
+
+confidence.innerHTML="--";
+
+risk.innerHTML="--";
+
+icon.innerHTML='<i class="fa-solid fa-circle-info"></i>';
+
+return;
+
+}
 
 if(income>=3000 && loan<=500000 && credit=="Good"){
 
-output.innerHTML="✅ LOAN APPROVED";
-output.style.color="green";
+resultBox.classList.add("approved");
 
-message.innerHTML="Congratulations! Based on the entered details, the applicant is eligible for loan approval.";
+icon.innerHTML='<i class="fa-solid fa-circle-check"></i>';
 
-box.classList.add("approved");
+icon.style.color="#16a34a";
+
+output.innerHTML="LOAN APPROVED";
+
+output.style.color="#15803d";
+
+message.innerHTML="Congratulations! The applicant is eligible for loan approval based on the entered details.";
+
+confidence.innerHTML="94%";
+
+risk.innerHTML="Low";
 
 }
+
 else{
 
-output.innerHTML="❌ LOAN REJECTED";
-output.style.color="red";
+resultBox.classList.add("rejected");
 
-message.innerHTML="The entered details do not satisfy the eligibility criteria for loan approval.";
+icon.innerHTML='<i class="fa-solid fa-circle-xmark"></i>';
 
-box.classList.add("rejected");
+icon.style.color="#dc2626";
+
+output.innerHTML="LOAN REJECTED";
+
+output.style.color="#dc2626";
+
+message.innerHTML="The applicant is not eligible for loan approval based on the entered details.";
+
+confidence.innerHTML="82%";
+
+risk.innerHTML="High";
 
 }
 
