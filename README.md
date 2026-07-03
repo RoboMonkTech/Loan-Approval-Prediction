@@ -218,3 +218,5 @@ Develop an administrator dashboard for analytics and monitoring.
 The Loan Approval Prediction System demonstrates the practical application of Machine Learning in the banking and finance sector. The project combines data analysis, predictive modeling, and web development to provide an efficient solution for evaluating loan applications.
 
 The machine learning model developed using the Random Forest Classifier accurately predicts loan eligibility, while the web application provides an interactive platform for users to experience the prediction process. This project serves as a strong example of integrating Artificial Intelligence with modern web technologies to solve real-world financial problems.
+
+Vercel Link:- https://loan-approval-prediction-one.vercel.app/
